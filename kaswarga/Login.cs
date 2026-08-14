@@ -5,11 +5,18 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace kaswarga
 {
+
     public partial class Login : Form
     {
+        private string konek = @"
+            Server=.\SQLEXPRESS;
+            Database=db_kaswarga;
+            Integrated Security=True;
+            TrustServerCertificate=True";
         public Login()
         {
             InitializeComponent();

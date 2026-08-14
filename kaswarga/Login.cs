@@ -22,12 +22,38 @@ namespace kaswarga
             InitializeComponent();
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void button_Click(object sender, EventArgs e)
         {
-            Form1 utama = new Form1();
-            utama.Show();
+            string query = "SELECT COUNT(1) FROM [user] " +
+                            "WHERE username=@user " +
+                            "AND password=@pass";
 
-            this.Close();
+            using (SqlConnection conn = new SqlConnection(konek))
+            {
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@user", userbox.Text.Trim());
+                    cmd.Parameters.AddWithValue("@pass", passbox.Text.Trim());
+                    try
+                    {
+                        conn.Open();
+                        int count = Convert.ToInt32(cmd.ExecuteScalar());
+                        if (count > 0)
+                        {
+                            this.DialogResult = DialogResult.OK;
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Username atau Password salah cuy");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
+                }
+            }
         }
 
         private void label2_Click(object sender, EventArgs e)

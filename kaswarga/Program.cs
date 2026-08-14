@@ -13,9 +13,15 @@ namespace kaswarga
 
             // UBAH BARIS INI: Ganti Form1() dengan nama Form Login Anda
             Login form = new Login();
-            form.Show();
 
-            Application.Run();
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                Application.Run(new Form1());
+            }
+            else
+            {
+                form.Show();
+            }
         }
     }
 }

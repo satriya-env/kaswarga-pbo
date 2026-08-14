@@ -62,9 +62,6 @@
             Guna.Charts.WinForms.ChartFont chartFont8 = new Guna.Charts.WinForms.ChartFont();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel1 = new Panel();
@@ -90,17 +87,30 @@
             Spline = new Guna.Charts.WinForms.GunaSplineDataset();
             Stat = new Guna.Charts.WinForms.GunaChart();
             guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
-            pemasukan = new Guna.UI2.WinForms.Guna2DataGridView();
-            Nama = new DataGridViewTextBoxColumn();
-            Nominal = new DataGridViewTextBoxColumn();
+            label12 = new Label();
             guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
+            panel4 = new Panel();
+            label22 = new Label();
+            label18 = new Label();
+            label19 = new Label();
+            panel3 = new Panel();
+            label21 = new Label();
+            label16 = new Label();
+            label17 = new Label();
+            panel2 = new Panel();
+            label20 = new Label();
+            label14 = new Label();
+            label15 = new Label();
+            label13 = new Label();
             panel1.SuspendLayout();
             guna2Panel1.SuspendLayout();
             guna2Panel2.SuspendLayout();
             guna2Panel3.SuspendLayout();
             guna2Panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pemasukan).BeginInit();
             guna2Panel5.SuspendLayout();
+            panel4.SuspendLayout();
+            panel3.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -257,7 +267,7 @@
             guna2Panel1.Controls.Add(label2);
             guna2Panel1.CustomBorderColor = SystemColors.HotTrack;
             guna2Panel1.CustomizableEdges = customizableEdges11;
-            guna2Panel1.FillColor = SystemColors.HotTrack;
+            guna2Panel1.FillColor = Color.FromArgb(0, 75, 200);
             guna2Panel1.Location = new Point(242, 68);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges12;
@@ -310,7 +320,7 @@
             guna2Panel2.Controls.Add(label7);
             guna2Panel2.CustomBorderColor = SystemColors.HotTrack;
             guna2Panel2.CustomizableEdges = customizableEdges13;
-            guna2Panel2.FillColor = SystemColors.HotTrack;
+            guna2Panel2.FillColor = Color.FromArgb(0, 75, 200);
             guna2Panel2.Location = new Point(506, 68);
             guna2Panel2.Name = "guna2Panel2";
             guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges14;
@@ -363,7 +373,7 @@
             guna2Panel3.Controls.Add(label10);
             guna2Panel3.CustomBorderColor = SystemColors.HotTrack;
             guna2Panel3.CustomizableEdges = customizableEdges15;
-            guna2Panel3.FillColor = SystemColors.HotTrack;
+            guna2Panel3.FillColor = Color.FromArgb(0, 75, 200);
             guna2Panel3.Location = new Point(786, 68);
             guna2Panel3.Name = "guna2Panel3";
             guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges16;
@@ -399,7 +409,7 @@
             label10.BackColor = Color.Transparent;
             label10.Font = new Font("Segoe UI", 50F);
             label10.ForeColor = Color.DodgerBlue;
-            label10.Location = new Point(126, 23);
+            label10.Location = new Point(163, 22);
             label10.Name = "label10";
             label10.Size = new Size(110, 99);
             label10.TabIndex = 0;
@@ -420,13 +430,12 @@
             // 
             // Stat
             // 
-            Stat.BackColor = Color.Azure;
             Stat.Datasets.AddRange(new Guna.Charts.Interfaces.IGunaDataset[] { Spline });
             chartFont1.FontName = "Arial";
             Stat.Legend.LabelFont = chartFont1;
-            Stat.Location = new Point(15, 12);
+            Stat.Location = new Point(15, 39);
             Stat.Name = "Stat";
-            Stat.Size = new Size(483, 209);
+            Stat.Size = new Size(483, 213);
             Stat.TabIndex = 5;
             chartFont2.FontName = "Arial";
             chartFont2.Size = 12;
@@ -438,23 +447,25 @@
             chartFont4.Size = 9;
             chartFont4.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
             Stat.Tooltips.TitleFont = chartFont4;
-            grid1.ZeroLineColor = Color.FromArgb(0, 75, 200);
+            Stat.XAxes.Display = false;
+            grid1.Color = Color.FromArgb(102, 144, 228);
+            grid1.DrawTicks = false;
+            grid1.LineWidth = 3;
+            grid1.ZeroLineColor = Color.FromArgb(102, 144, 228);
+            grid1.ZeroLineWidth = 3;
             Stat.XAxes.GridLines = grid1;
             chartFont5.FontName = "Arial";
             chartFont5.Size = 12;
             tick1.Font = chartFont5;
-            tick1.ForeColor = Color.Black;
             Stat.XAxes.Ticks = tick1;
-            grid2.Color = Color.FromArgb(0, 75, 200);
+            grid2.Color = SystemColors.ButtonShadow;
             grid2.Display = false;
-            grid2.ZeroLineColor = Color.FromArgb(0, 75, 200);
+            grid2.ZeroLineColor = Color.DimGray;
             Stat.YAxes.GridLines = grid2;
             chartFont6.FontName = "Segoe UI";
             chartFont6.Size = 10;
             tick2.Font = chartFont6;
-            tick2.ForeColor = Color.Black;
             tick2.HasMaximum = true;
-            tick2.HasMinimum = true;
             tick2.Maximum = 50D;
             tick2.Minimum = 5D;
             Stat.YAxes.Ticks = tick2;
@@ -469,80 +480,203 @@
             // guna2Panel4
             // 
             guna2Panel4.BackColor = Color.Transparent;
-            guna2Panel4.BorderColor = SystemColors.HotTrack;
+            guna2Panel4.BorderColor = SystemColors.ControlDark;
             guna2Panel4.BorderRadius = 15;
-            guna2Panel4.BorderThickness = 3;
+            guna2Panel4.BorderThickness = 2;
+            guna2Panel4.Controls.Add(label12);
             guna2Panel4.Controls.Add(Stat);
             guna2Panel4.CustomizableEdges = customizableEdges17;
-            guna2Panel4.FillColor = Color.Azure;
+            guna2Panel4.FillColor = Color.White;
             guna2Panel4.Location = new Point(242, 207);
             guna2Panel4.Name = "guna2Panel4";
             guna2Panel4.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            guna2Panel4.Size = new Size(514, 232);
+            guna2Panel4.Size = new Size(514, 268);
             guna2Panel4.TabIndex = 6;
             // 
-            // pemasukan
+            // label12
             // 
-            dataGridViewCellStyle1.BackColor = Color.White;
-            pemasukan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            pemasukan.BackgroundColor = Color.Azure;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            pemasukan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            pemasukan.ColumnHeadersHeight = 4;
-            pemasukan.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            pemasukan.Columns.AddRange(new DataGridViewColumn[] { Nama, Nominal });
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            pemasukan.DefaultCellStyle = dataGridViewCellStyle3;
-            pemasukan.GridColor = Color.FromArgb(231, 229, 255);
-            pemasukan.Location = new Point(15, 12);
-            pemasukan.Name = "pemasukan";
-            pemasukan.RowHeadersVisible = false;
-            pemasukan.Size = new Size(245, 209);
-            pemasukan.TabIndex = 7;
-            pemasukan.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
-            pemasukan.ThemeStyle.BackColor = Color.Azure;
-            pemasukan.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
-            pemasukan.ThemeStyle.HeaderStyle.Height = 4;
-            pemasukan.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
-            pemasukan.ThemeStyle.RowsStyle.Height = 25;
-            // 
-            // Nama
-            // 
-            Nama.HeaderText = "Nama";
-            Nama.Name = "Nama";
-            Nama.Visible = false;
-            // 
-            // Nominal
-            // 
-            Nominal.HeaderText = "Nominal";
-            Nominal.Name = "Nominal";
-            Nominal.Visible = false;
+            label12.AutoSize = true;
+            label12.BackColor = Color.Transparent;
+            label12.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label12.ForeColor = Color.DimGray;
+            label12.Location = new Point(15, 8);
+            label12.Name = "label12";
+            label12.Size = new Size(138, 28);
+            label12.TabIndex = 3;
+            label12.Text = "Data Bulan ini";
             // 
             // guna2Panel5
             // 
-            guna2Panel5.BorderColor = SystemColors.HotTrack;
+            guna2Panel5.BorderColor = SystemColors.ControlDark;
             guna2Panel5.BorderRadius = 15;
-            guna2Panel5.BorderThickness = 3;
-            guna2Panel5.Controls.Add(pemasukan);
+            guna2Panel5.BorderThickness = 2;
+            guna2Panel5.Controls.Add(panel4);
+            guna2Panel5.Controls.Add(panel3);
+            guna2Panel5.Controls.Add(panel2);
+            guna2Panel5.Controls.Add(label13);
             guna2Panel5.CustomizableEdges = customizableEdges19;
-            guna2Panel5.FillColor = Color.Azure;
+            guna2Panel5.FillColor = Color.White;
             guna2Panel5.Location = new Point(786, 207);
             guna2Panel5.Name = "guna2Panel5";
             guna2Panel5.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            guna2Panel5.Size = new Size(273, 232);
+            guna2Panel5.Size = new Size(273, 268);
             guna2Panel5.TabIndex = 8;
+            // 
+            // panel4
+            // 
+            panel4.Controls.Add(label22);
+            panel4.Controls.Add(label18);
+            panel4.Controls.Add(label19);
+            panel4.Location = new Point(15, 182);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(239, 59);
+            panel4.TabIndex = 11;
+            // 
+            // label22
+            // 
+            label22.AutoSize = true;
+            label22.BackColor = Color.Transparent;
+            label22.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label22.ForeColor = Color.DimGray;
+            label22.Location = new Point(177, 17);
+            label22.Name = "label22";
+            label22.RightToLeft = RightToLeft.Yes;
+            label22.Size = new Size(44, 28);
+            label22.TabIndex = 14;
+            label22.Text = "INT";
+            label22.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.BackColor = Color.Transparent;
+            label18.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label18.ForeColor = Color.FromArgb(25, 25, 25);
+            label18.Location = new Point(3, 11);
+            label18.Name = "label18";
+            label18.Size = new Size(54, 21);
+            label18.TabIndex = 8;
+            label18.Text = "String";
+            // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.BackColor = Color.Transparent;
+            label19.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label19.ForeColor = Color.Gray;
+            label19.Location = new Point(3, 32);
+            label19.Name = "label19";
+            label19.Size = new Size(53, 13);
+            label19.TabIndex = 9;
+            label19.Text = "datetime";
+            // 
+            // panel3
+            // 
+            panel3.Controls.Add(label21);
+            panel3.Controls.Add(label16);
+            panel3.Controls.Add(label17);
+            panel3.Location = new Point(15, 117);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(239, 59);
+            panel3.TabIndex = 10;
+            // 
+            // label21
+            // 
+            label21.AutoSize = true;
+            label21.BackColor = Color.Transparent;
+            label21.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label21.ForeColor = Color.DimGray;
+            label21.Location = new Point(177, 17);
+            label21.Name = "label21";
+            label21.RightToLeft = RightToLeft.Yes;
+            label21.Size = new Size(44, 28);
+            label21.TabIndex = 13;
+            label21.Text = "INT";
+            label21.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.BackColor = Color.Transparent;
+            label16.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label16.ForeColor = Color.FromArgb(25, 25, 25);
+            label16.Location = new Point(3, 11);
+            label16.Name = "label16";
+            label16.Size = new Size(54, 21);
+            label16.TabIndex = 8;
+            label16.Text = "String";
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.BackColor = Color.Transparent;
+            label17.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label17.ForeColor = Color.Gray;
+            label17.Location = new Point(3, 32);
+            label17.Name = "label17";
+            label17.Size = new Size(53, 13);
+            label17.TabIndex = 9;
+            label17.Text = "datetime";
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(label20);
+            panel2.Controls.Add(label14);
+            panel2.Controls.Add(label15);
+            panel2.Location = new Point(15, 52);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(239, 59);
+            panel2.TabIndex = 7;
+            // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.BackColor = Color.Transparent;
+            label20.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label20.ForeColor = Color.DimGray;
+            label20.Location = new Point(177, 17);
+            label20.Name = "label20";
+            label20.RightToLeft = RightToLeft.Yes;
+            label20.Size = new Size(44, 28);
+            label20.TabIndex = 12;
+            label20.Text = "INT";
+            label20.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.BackColor = Color.Transparent;
+            label14.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label14.ForeColor = Color.FromArgb(25, 25, 25);
+            label14.Location = new Point(3, 11);
+            label14.Name = "label14";
+            label14.Size = new Size(54, 21);
+            label14.TabIndex = 8;
+            label14.Text = "String";
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.BackColor = Color.Transparent;
+            label15.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label15.ForeColor = Color.Gray;
+            label15.Location = new Point(3, 32);
+            label15.Name = "label15";
+            label15.Size = new Size(53, 13);
+            label15.TabIndex = 9;
+            label15.Text = "datetime";
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.BackColor = Color.Transparent;
+            label13.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label13.ForeColor = Color.DimGray;
+            label13.Location = new Point(15, 8);
+            label13.Name = "label13";
+            label13.Size = new Size(155, 28);
+            label13.TabIndex = 6;
+            label13.Text = "Riwayat Terbaru";
             // 
             // Form1
             // 
@@ -569,8 +703,15 @@
             guna2Panel3.ResumeLayout(false);
             guna2Panel3.PerformLayout();
             guna2Panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pemasukan).EndInit();
+            guna2Panel4.PerformLayout();
             guna2Panel5.ResumeLayout(false);
+            guna2Panel5.PerformLayout();
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -599,9 +740,20 @@
         private Guna.Charts.WinForms.GunaSplineDataset Spline;
         private Guna.Charts.WinForms.GunaChart Stat;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
-        private Guna.UI2.WinForms.Guna2DataGridView pemasukan;
-        private DataGridViewTextBoxColumn Nama;
-        private DataGridViewTextBoxColumn Nominal;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
+        private Label label12;
+        private Label label13;
+        private Panel panel4;
+        private Label label18;
+        private Label label19;
+        private Panel panel3;
+        private Label label16;
+        private Label label17;
+        private Panel panel2;
+        private Label label14;
+        private Label label15;
+        private Label label22;
+        private Label label21;
+        private Label label20;
     }
 }
